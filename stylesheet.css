@@ -186,6 +186,10 @@ h2{
     border-bottom: solid 0.2rem lightsalmon;
 }
 
+.guide a{
+    color: #000
+}
+
 /*access*/
 .parent,.left p{
     display: flex;
