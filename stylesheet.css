@@ -1,0 +1,292 @@
+html{
+    font-size:62.5%;
+}
+
+body {
+    font-family: メイリオ, "Gothic Pro",serif,Verdana, Arial, Helvetica,"ＭＳ Ｐゴシック","ヒラギノ丸ゴ Pro W4", Osaka, sans-serif;
+    color: #000;
+    font-size: 1.5rem;
+    background-image: url(images/background.jpg);
+}
+  
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.6;
+    color: lightsalmon;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+/*header-wrap*/
+header{
+    height: 105vh;
+}
+
+.global-nav{
+    float: right;  
+    text-align: center; 
+    margin-top: 1%; 
+}
+
+.global-nav li {
+    float: left;  
+    width: 120px;
+    padding: 1rem 0;
+}
+
+.global-nav li a{
+    color: #fff;
+}
+
+.global-nav li a:hover{
+    color: lightsalmon;
+}
+
+.border{
+    border-left: #fff solid 0.05rem;
+}
+
+.slide{
+    position: relative;  /* 親要素にrelativeを指定 */
+    clear: left;
+    
+}
+
+.slide img{
+    position: absolute;   /* absoluteで画像を重ねる */
+    display: none;        /* 画像を非表示に非表示 */
+    height: 91vh;
+    width: 100%;
+}
+
+
+/*main*/
+h2{
+    font-size: 2.4rem;
+    border-bottom: lightsalmon dashed 0.3rem;
+    margin: 4%;
+    padding-bottom: 1%;
+    font-weight: 700;
+}
+
+.more{
+    padding: 3%;
+    background-color: lightsalmon;
+    color: #fff;
+    border-radius: 30px;
+    margin: 2% 3%;   
+}
+
+.contents , .friends{
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 3% 0; 
+}
+
+.contents li{
+    flex: auto;
+    width: 45%;
+}
+
+.friend-contents,.performance-contents,.news-contents,.guide-contents,.access-contents{
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 20px
+}
+
+.friends,.performance,dl,.guides,.left{
+    clear: left;
+}
+
+/*friends*/
+.friends img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10% 0 1% 0;
+}
+
+.friends li{
+    width: 50%;
+    text-align: center;
+}
+
+.friends li p,.performance-contents p,.time{
+    padding: 5% 0;
+}
+
+/*performance*/
+.performance,.guides{
+    padding: 3% 10% 7% 10%;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: lightsalmon;
+}
+
+/*news*/
+.pickup,.event{
+    color: #fff;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    padding: 0 2%;
+}
+
+.pickup{
+    background-color: red;
+}
+
+.event{
+    background-color: #1e90ff;
+}
+
+.news-contents div{
+    margin: 8% 3%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 0;
+    border-bottom: #ccc dashed 0.05rem;
+}
+
+.news-contents dl dt{
+    width: 30%;
+    padding-top: 3.12rem;
+}
+
+.news-contents dl dd{
+    width: 70%;
+    line-height: 2.5rem;
+}
+
+/*guide*/
+.guide{
+    display: inline-block;
+    width: 290px;
+    margin: 5%;
+    padding: 8%;
+    border-bottom: solid 0.2rem lightsalmon;
+}
+
+/*access*/
+.parent,.left p{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5% 0;
+}
+
+.left,iframe{
+    margin: 0 6%;
+    margin-bottom: 5%;
+}
+
+.access-title,.address-title{
+    font-weight: 700;
+}
+
+.address-title{
+    padding-top: 20%;
+}
+
+/*footer*/
+footer,.copyright{
+    background-color: lightsalmon;
+    padding-top: 3%;
+}
+
+footer p ,.footer-nav li a{
+    line-height: 3rem;
+    color: #fff;
+}
+
+.header-logo,.footer-left,h2,.left{
+    float: left;
+}
+
+.footer-nav,.more,iframe{
+    float: right;
+}
+
+.copyright{
+    clear: left;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+footer:after{             /*floatが親要素からはみ出すのを直す*/
+    content: "";
+    clear: both;
+    display: block;
+}
+
+@media screen and (max-width:670px){
+    .header,.main,.footer{
+        width: auto;
+    }
+ 
+    header{
+        height: 100vh;
+    }
+
+    .header-logo{
+        width: 30%;
+    }
+
+    .global-nav{
+        width: 100%;
+    }
+
+    .global-nav li{
+        border-left: none;
+    }
+
+    .slide img{
+        height: 83vh;
+        margin-top: 20%;
+    }
+
+    .friends li{
+        width: 50%;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    .guide{
+        width: 200%;
+    }
+
+    iframe{
+        width: 88%;
+    }
+
+    .footer{
+        width: 90%;
+    }
+
+    .footer-nav{
+        text-align: right;
+    }
+
+    .copyright{
+        padding-top: 5%;
+    }
+}
